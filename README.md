@@ -25,11 +25,11 @@ Apart from this also I have worked as a Freelancer and Youtube content creator i
 
 **Features of the application**
 =====================
- - Shorten URL: Create a shortned URL from a given original URL, this could be  automatically assigned or choosen by the user from available links generated based on users preferance
- - Whitelist users based on emails for each URL, This would be an optional feature for each shortned url
- - Simple Email based authentication when opening URL, to login simply goto your email and click a link sent by our system to login. The link will be valid for 5 minutes and will be usable only one time (For security reasons)
- - Send email when a user from our whitelist opens our URL, this would also be a optional feature to select while creating a shortned url
- - Admin panel to manage Users, Emails and Urls, this would be useful for performing admin tasks
+ - **Shorten URL**: Create a shortned URL from a given original URL, this could be  automatically assigned or choosen by the user from available links generated based on users preferance
+ - **Whitelist users** based on emails for each URL, This would be an optional feature for each shortned url
+ - Simple **Email based authentication** when opening URL, to login simply goto your email and click a link sent by our system to login. The link will be valid for 5 minutes and will be usable only one time (For security reasons)
+ - Send **email notification** when a user from our whitelist opens our URL, this would also be a optional feature to select while creating a shortned url
+ - **Admin panel** to manage Users, Emails and Urls, this would be useful for performing admin tasks
 
 **User flow diagram**
 =====================
@@ -65,14 +65,18 @@ Endpoint  | Name | Description |
  **Tech stack**
 =====================
   ### 1. Backend - Django REST framework
-  DRF is a modern API development framework which could be used to build applications at scale. 
-  We can use PostgreSQL as our database.  
+  1. DRF is a modern API development framework which could be used to build applications at scale. 
+  2. Django also provides an in built admin panel which works right out of the box for managing the backend.
+  It could be used to create superadmins and staff users who can look after specific things if the go wrong somewhere.  
+  3. We can use PostgreSQL (A performant and scalable MySQLbased database) as our database.
+  4. This backend will be able to serve both mobile and web based frontends
+  5. Swagger API documentation can be easily integrated with the Django backend providing neat and interactive docs for the API's apart from the written ones
 
   ### 2. Frontend web - React JS
-  It is a popular frontend franework which wil work great with our usecase.
+  It is a popular frontend franework which wil work great with our usecase. It provides good tooling like router and http client which will help to manage the codebase.
 
   ### 3. Frontend mobile - Flutter 
- Could be done later on or could be included in this GSOC project
+ Could be done later on or could be included in this GSOC project as seen fit
 
 
 **Timeline**
@@ -125,6 +129,7 @@ Endpoint  | Name | Description |
   1. Integrate the profile api to the profile page
   2. Improving test cases and testing project features for bugs
   3. Working on admin panel for easy management
+  4. Integrate API documentation tools like Swagger for providing neat and interactive API's
 - **July week 4**: 
   1. Using Nginx to serve the application
   2. Contanerizing the application for easy deployments  
@@ -135,7 +140,7 @@ Endpoint  | Name | Description |
 I have presented a well rounded overview of the application I am proposing to develop in this Gsoc.
 I have covered:
 1. User flow
-2. API development plan with input and outputs to the API's
+2. API development plan
 3. Integration timeline with the UI
 4. Admin level management and deployment of the application
 As the project gets over by August I can also start working on a Flutter mobile app using the same API's for the next few months period.
