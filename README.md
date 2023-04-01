@@ -78,5 +78,43 @@ Endpoint  | Name | Description |
 **Timeline**
 =====================
 
+- May 4-28: Community bonding period
+- **June week 1**: 
+  1. Setting up backend and frontend codebases with PostrgeSQL configuration
+  2. Integrating mail server with backend
+  3. Creating home page for the app
+- **June week 2**: 
+  1. Creating and testing `/sendEmail ` and `/login` API's
+     1. Send email will send out an email with a login link to the given email address, the token could be randomly generated and stored in the database temporarily while the user clicks it and logs in
+     2. Login will first check if the user exists in our database, if so then it will return the existing user object to the frontend. If not then it will create a new user object and store it in the database
+  2. Creating login page in frontend and integrating it with backend apis
+- **June week 3**: 
+  Create URL's related models and API's namely:
+  1. `/createURL`
+     1. Create model for URL's with user model as a foreign key
+     2. Internally validate if the given shortned URL is valid and does not exists in our database
+  2. `/checkURL`
+     1. Takes in a user given shortened URL and returns `True` if the URL is available for use and `False` if it has already been taken by some other user
+  3. `/getUrlDetails`
+  4. `/urlOpened`
+- **June week 4**: 
+- Create frontend pages namely:
+  1. Create URL page
+     1. URL availablity checker form
+     2. Section for allowing authentication for viewing URL's
+     3. Section for entering and saving Whitelisted email addresses
+     4. Submit validation for the form
+  2. URL does not exists page
+     1. It will show URL does not exists in two cases: When either the URL is invalid, or the user is not present in the whitelisted users for that particular URL
+  3. View URL page
+     1. Will check URL validity and redirect if both the url is valid and the user has permissions
+- **July week 1**:
+  Integrate all UI elements and pages to backend API's 
+- **July week 3**: 
+- Create user profile page
+- **July week 2**: 
+- **July week 4**: 
+  
+
 **Conclusion**
 =====================
