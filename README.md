@@ -96,7 +96,9 @@ Endpoint  | Name | Description |
   2. `/checkURL`
      1. Takes in a user given shortened URL and returns `True` if the URL is available for use and `False` if it has already been taken by some other user
   3. `/getUrlDetails`
+     1. Given a URL and auth token it will return URL details like if it is valid, expiry etc
   4. `/urlOpened`
+     1. Will trigger an email to the creator of the url saying "X has opened your url"
 - **June week 4**: 
 - Create frontend pages namely:
   1. Create URL page
@@ -110,11 +112,32 @@ Endpoint  | Name | Description |
      1. Will check URL validity and redirect if both the url is valid and the user has permissions
 - **July week 1**:
   Integrate all UI elements and pages to backend API's 
-- **July week 3**: 
-- Create user profile page
+  1. Integrate create URL page
+     1. Integrate url availablity checker form which needs to call `/checkUrl` api repeatedly
+     2. Submit all the data collected through the form to the `/createURL` api in a JSON predefined format
+  2. Integrate view url page with backend api's: 
+     1. Call url checker API to get if if the user has permissions to view the url and the url is valid. It true then redirect to the url after calling `urlOpened` else redirect to Url not found page.
 - **July week 2**: 
+1. Create user profile page
+  1. The page will contain all the urls you have creates with option to edit or delete the urls
+2. Create `/profile` API 
+- **July week 3**: 
+  1. Integrate the profile api to the profile page
+  2. Improving test cases and testing project features for bugs
+  3. Working on admin panel for easy management
 - **July week 4**: 
+  1. Using Nginx to serve the application
+  2. Contanerizing the application for easy deployments  
   
 
 **Conclusion**
 =====================
+I have presented a well rounded overview of the application I am proposing to develop in this Gsoc.
+I have covered:
+1. User flow
+2. API development plan with input and outputs to the API's
+3. Integration timeline with the UI
+4. Admin level management and deployment of the application
+As the project gets over by August I can also start working on a Flutter mobile app using the same API's for the next few months period.
+
+Thank you!
